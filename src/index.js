@@ -8,10 +8,7 @@ const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-mongoose.connect(
-  "mongodb+srv://semana:semana@cluster0.15xkc.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose.connect("", { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use((req, res, next) => {
   req.io = io;
